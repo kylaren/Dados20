@@ -22,6 +22,7 @@ void mostrarVectorSin0(int v[], int tam); /// muestra lo que contiene cada una d
 void cargarVector(int v[], int tam);///asigna valores a cada una de las posiciones del vector
 
 
+
 ///DEFINICIONES DE FUNCIONES
 
 void cargarAleatorio(int v[], int tam, int limite){
@@ -94,8 +95,10 @@ void cargarVector(int v[], int tam){
     for(i=0;i<tam;i++){
         cout<<"DADO " << i + 1 << ":";
         cin>>v[i];
+        system("cls");
     }
 }
+
 
 
 
