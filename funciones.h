@@ -1,25 +1,30 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
 
+#include "dados.h"
+#include "rlutil.h"
+
 ///DECLARACION DE FUNCIONES
 
 void cargarAleatorio(int v[], int* tam, int* limite); ///asigna valores aleatorios a cada posicion del vector
 
 void mostrarVector(int v[], int* tam); ///muestra lo que contiene cada una de las posiciones del vector
 
-int valormaximoVector(int v[], int tam);///devuelve  el valor (primero) maximo en el vector
+int valormaximoVector(int v[], int tam); ///devuelve  el valor (primero) maximo en el vector
 
-void ponerCero(int v[], int tam);/// pone en 0 todas las posiciones del vector
+void ponerCero(int v[], int tam); /// pone en 0 todas las posiciones del vector
 
 int sumarVector(int v[], int tam ); /// suma los valores contenidos en el vector
 
-int posicionNumeroEnVector(int v[],int tam, int numero);/// devuelve la posición que ocupa un número que se //envía como parámetro. Devuelve la primera posición que encuentra el número. Si no lo encuentra devuelve -1
+int posicionNumeroEnVector(int v[],int tam, int numero); /// devuelve la posición que ocupa un número que se //envía como parámetro. Devuelve la primera posición que encuentra el número. Si no lo encuentra devuelve -1
 
-int contarNumerosRepetidos(int v[], int tam , int numero);///cuenta la cantidad de veces que se repite un //número en el vector
+int contarNumerosRepetidos(int v[], int tam , int numero); ///cuenta la cantidad de veces que se repite un //número en el vector
 
 void mostrarVectorSin0(int v[], int tam); /// muestra lo que contiene cada una de las posiciones del vector que no contienen 0.
 
-void cargarVector(int v[], int tam);///asigna valores a cada una de las posiciones del vector
+void cargarVector(int v[], int tam); ///asigna valores a cada una de las posiciones del vector
+
+void mostrarDados(int v[], int tam); ///muestra los dados
 
 
 
@@ -95,11 +100,30 @@ void cargarVector(int v[], int tam){
     for(i=0;i<tam;i++){
         cout<<"DADO " << i + 1 << ":";
         cin>>v[i];
-        system("cls");
     }
 }
 
+void mostrarDados(int v[], int tam){
+    int i, cara;
+    for(i=0;i<tam;i++){
+        cara=v[i];
+        switch(cara){
+            case 1: cara1();
+            break;
+            case 2: cara2();
+            break;
+            case 3: cara3();
+            break;
+            case 4: cara4();
+            break;
+            case 5: cara5();
+            break;
+            case 6: cara6();
+            break;
+        }
+    }
 
+}
 
 
 #endif // FUNCIONES_H_INCLUDED

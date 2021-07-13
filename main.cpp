@@ -6,8 +6,8 @@
 #include <cstring>
 
 using namespace std;
+
 #include "rlutil.h"
-#include "funciones.h"
 #include "menu.h"
 
 using namespace rlutil;
@@ -44,7 +44,6 @@ int main(){
                     return 0;
                 break;
         }
-
         cout << endl;
         system("pause");
     }

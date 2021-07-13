@@ -1,5 +1,8 @@
 #ifndef MENU_H_INCLUDED
 #define MENU_H_INCLUDED
+
+#include "funciones.h"
+
 ///DECLARACION DE VARIABLES
 
 int o, i, j, k, opcM;
@@ -12,7 +15,17 @@ char highestScorePlayer[15];
 int highestScore;
 
 
-/// OPCIONES DEL MENU
+/// DECLARACION DE FUNCIONES
+
+void menu(); ///menu completo
+void unJugador(); /// juego para 1 jugador
+void dosJugadores(); /// juego para 2 jugadores
+void puntuacionAlta(); /// puntuacion mas alta
+void modoSimulado(); /// modo simulado para 1 o 2 jugadores
+
+
+/// DEFINICIONES DE FUNCIONES: OPCIONES DEL MENU
+
 void menu(){
     system("cls");
             gotoxy(30,11);
@@ -55,7 +68,6 @@ void unJugador(){
     for(k=0 ; k<=5 ; k++){
         vnumgenerador[k]=20+k;
         }
-
     cout << "JUEGO NUEVO PARA 1 JUGADOR." << endl;
                         for (o=1; o<44; o++) cout << (char)205;
                         cout << endl;
@@ -90,7 +102,7 @@ void unJugador(){
                                             cout << "TIRADA N" << (char)167 << ntirada << endl;
                                             for (o=1; o<55; o++) cout << (char)205;
                                             cout << endl;
-                                        mostrarVector(vtirada,j);
+                                        mostrarDados(vtirada,j);
                                         cout << endl;
                                         cout << "El valor maximo es: " << maximo << endl;
                                         for (o=1; o<55; o++) cout << (char)205;

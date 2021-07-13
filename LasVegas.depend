@@ -28,3 +28,36 @@
 
 1625244571 c:\users\chiqui\documents\github\dados20\menu.h
 
+1625952443 source:c:\users\fabian\desktop\proyecto las vegas\dados20\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<ctime>
+	<conio.h>
+	<cstring>
+	"rlutil.h"
+	"menu.h"
+
+1571569938 c:\users\fabian\desktop\proyecto las vegas\dados20\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1625953940 c:\users\fabian\desktop\proyecto las vegas\dados20\funciones.h
+	"dados.h"
+	"rlutil.h"
+
+1625951606 c:\users\fabian\desktop\proyecto las vegas\dados20\menu.h
+	"funciones.h"
+
+1625951606 c:\users\fabian\desktop\proyecto las vegas\dados20\dados.h
+
