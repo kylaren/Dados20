@@ -7,7 +7,7 @@
 
 int o, i, j, k, opcM;
 char player1[15], player2[15];
-int cantRondas;
+int cantRondas, contMaximos;
 int vtirada[5], vmaximos[5], vnumgenerador[6];
 int ntirada, puntosapostados, puntajeacumulado, maximo, sumamax, cRondas0, cRondasP;
 int numGeneradorPuntos, cantDadosRep, puntajefinal, puntajefinal1, puntajefinal2;
@@ -81,6 +81,7 @@ void unJugador(){
                             cRondas0=0;
                             cRondasP=0;
                             for (i=1; i<=cantRondas; i++){/// RONDAS
+                                contMaximos=0;
                                 system("cls");
                                 cout << "Cuantos puntos quiere apostar para esta ronda?: ";
                                 cin >> puntosapostados;
@@ -89,30 +90,32 @@ void unJugador(){
                                 ntirada=0; /// reinicio el numero de tirada en cada ronda
                                 ponerCero(vmaximos,5); /// pongo en 0 el vector de maximos de tiradas, en cada ronda
                                 for(j=5; j>=1; j--){/// TIRADAS
+                                        contMaximos++;
                                         cout << "JUGADOR: " << player1 << " " << (char)186;
                                         cout << " RONDA N" << (char)167 << i << " " << (char)186;
                                         cargarAleatorio(vtirada,j,6);
                                         maximo=valormaximoVector(vtirada,j);
                                         vmaximos[j-1]=maximo;
                                         sumamax=sumarVector(vmaximos,5);
-                                            cout << " PUNTAJE ACUMULADO: " << sumamax << endl;
-                                            for (o=1; o<55; o++) cout << (char)205;
-                                            cout << endl;
+                                        cout << " PUNTAJE ACUMULADO: " << sumamax << endl;
+                                        for (o=1; o<55; o++) cout << (char)205;
+                                        cout << endl;
                                         ntirada++;
-                                            cout << "TIRADA N" << (char)167 << ntirada << endl;
-                                            for (o=1; o<55; o++) cout << (char)205;
-                                            cout << endl;
-                                        mostrarDados(vtirada,j);
+                                        cout << "TIRADA N" << (char)167 << ntirada << endl;
+                                        for (o=1; o<55; o++) cout << (char)205;
+                                        cout << endl;
+                                        mostrarDados(vtirada, j, 0);
                                         cout << endl;
                                         cout << "El valor maximo es: " << maximo << endl;
                                         for (o=1; o<55; o++) cout << (char)205;
-                                                cout << endl;
-                                                cout << "DADOS CON PUNTAJES MAXIMOS DE CADA TIRADA:";
-                                                mostrarVectorSin0(vmaximos,5);
-                                                cout << endl;
-                                                cout << (char)168 << "Lanzar dados? ";
-                                                system("pause");
-                                                system("cls");
+                                        cout << endl;
+                                        cout << "DADOS CON PUNTAJES MAXIMOS DE CADA TIRADA:";
+                                        cout<<endl<<contMaximos;
+                                        mostrarDados(vmaximos, contMaximos, 12);
+                                        cout << endl;
+                                        cout << (char)168 << "Lanzar dados? ";
+                                        system("pause");
+                                        system("cls");
                                         if(j<=1){ /// Ingreso despues de la ultima tirada
                                                 cout << "PUNTAJE ACUMULADO: " << sumamax << endl;
                                                if(sumamax>=20){ /// TIRO DE PUNTAJE
@@ -609,6 +612,7 @@ void modoSimulado(){
                                                         mostrarVectorSin0(vmaximos,5);
                                                         cout << endl;
                                                         cout << (char)168 << "Lanzar dados? ";
+                                                        cout << endl<< endl<< endl<< endl;
                                                         system("pause");
                                                         system("cls");
                                                 if(j<=1){ /// Ingreso despues de la ultima tirada

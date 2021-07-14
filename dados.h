@@ -18,75 +18,107 @@ void cara6(); /// cara 6
 
 /// DEFINICIONES DE FUNCIONES
 
-void cara1(){
-    cout << char(218);
-    for (i=1; i<8; i++) cout << (char)196;
-    cout << char(191) << endl;
-    cout << char(179) << "       " << char(179) << endl;
-    cout << char(179) << "   " << char(254) << "   " << char(179) << endl;
-    cout << char(179) << "       " << char(179) << endl;
-    cout << char(192);
-    for (i=1; i<8; i++) cout << (char)196;
-    cout << char(217) << endl;
+void cara1(int i, int y){
+     ///DADO 1
+    gotoxy((10*i+1),(y+5));
+    cout<<char(201)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(187);
+    gotoxy((10*i+1),(y+6));
+    cout<<char(186)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(186);
+    gotoxy((10*i+1),(y+7));
+    cout<<char(186);
+    gotoxy(((10*i+1)+1),(y+7));
+    cout<<char(255)<<char(255)<<char(255)<<char(254)<<char(255)<<char(255)<<char(255);
+    gotoxy(((10*i+1)+8),(y+7));
+    cout<<char(186);
+    gotoxy((10*i+1),(y+8));
+    cout<<char(186)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(186);
+    gotoxy((10*i+1),(y+9));
+    cout<<char(200)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(188)<<endl;
 }
 
-void cara2(){
-    cout << char(218);
-    for (i=1; i<8; i++) cout << (char)196;
-    cout << char(191) << endl;
-    cout << char(179) << " " << char (254) << "     " << char(179) << endl;
-    cout << char(179) << "       " << char(179) << endl;
-    cout << char(179) << "     " << char(254) << " " << char(179) << endl;
-    cout << char(192);
-    for (i=1; i<8; i++) cout << (char)196;
-    cout << char(217) << endl;
+void cara2(int i, int y){
+    gotoxy((10*i+1),(y+5));
+    cout<<char(201)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(187);
+    gotoxy((10*i+1),(y+6));
+    cout<<char(186)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(254)<<char(255)<<char(186);
+    gotoxy((10*i+1),(y+7));
+    cout<<char(186);
+    gotoxy(((10*i+1)+1),(y+7));
+    cout<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255);
+    gotoxy(((10*i+1)+8),(y+7));
+    cout<<char(186);
+    gotoxy((10*i+1),(y+8));
+    cout<<char(186)<<char(255)<<char(254)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(186);
+    gotoxy((10*i+1),(y+9));
+    cout<<char(200)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(188)<<endl;
 }
 
-void cara3(){
-    cout << char(218);
-    for (i=1; i<8; i++) cout << (char)196;
-    cout << char(191) << endl;
-    cout << char(179) << " " << char (254) << "     " << char(179) << endl;
-    cout << char(179) << "   " << char(254) << "   " << char(179) << endl;
-    cout << char(179) << "     " << char(254) << " " << char(179) << endl;
-    cout << char(192);
-    for (i=1; i<8; i++) cout << (char)196;
-    cout << char(217) << endl;
+void cara3(int i, int y){
+    gotoxy((10*i+1),(y+5));
+    cout<<char(201)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(187);
+    gotoxy((10*i+1),(y+6));
+    cout<<char(186)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(254)<<char(255)<<char(186);
+    gotoxy((10*i+1),(y+7));
+    cout<<char(186);
+    gotoxy(((10*i+1)+1),(y+7));
+    cout<<char(255)<<char(255)<<char(255)<<char(254)<<char(255)<<char(255)<<char(255);
+    gotoxy(((10*i+1)+8),(y+7));
+    cout<<char(186);
+    gotoxy((10*i+1),(y+8));
+    cout<<char(186)<<char(255)<<char(254)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(186);
+    gotoxy((10*i+1),(y+9));
+    cout<<char(200)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(188)<<endl;
 }
 
-void cara4(){
-    cout << char(218);
-    for (i=1; i<8; i++) cout << (char)196;
-    cout << char(191) << endl;
-    cout << char(179) << " " << char (254) << "   " << char(254) << " " << char(179) << endl;
-    cout << char(179) << "       " << char(179) << endl;
-    cout << char(179) << " " << char (254) << "   " << char(254) << " " << char(179) << endl;
-    cout << char(192);
-    for (i=1; i<8; i++) cout << (char)196;
-    cout << char(217) << endl;
+void cara4(int i, int y){
+    gotoxy((10*i+1),(y+5));
+    cout<<char(201)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(187);
+    gotoxy((10*i+1),(y+6));
+    cout<<char(186)<<char(255)<<char(254)<<char(255)<<char(255)<<char(255)<<char(254)<<char(255)<<char(186);
+    gotoxy((10*i+1),(y+7));
+    cout<<char(186);
+    gotoxy(((10*i+1)+1),(y+7));
+    cout<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255)<<char(255);
+    gotoxy(((10*i+1)+8),(y+7));
+    cout<<char(186);
+    gotoxy((10*i+1),(y+8));
+    cout<<char(186)<<char(255)<<char(254)<<char(255)<<char(255)<<char(255)<<char(254)<<char(255)<<char(186);
+    gotoxy((10*i+1),(y+9));
+    cout<<char(200)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(188)<<endl;
+
 }
 
-void cara5(){
-    cout << char(218);
-    for (i=1; i<8; i++) cout << (char)196;
-    cout << char(191) << endl;
-    cout << char(179) << " " << char (254) << "   " << char(254) << " " << char(179) << endl;
-    cout << char(179) << "   " << char(254) << "   " << char(179) << endl;
-    cout << char(179) << " " << char (254) << "   " << char(254) << " " << char(179) << endl;
-    cout << char(192);
-    for (i=1; i<8; i++) cout << (char)196;
-    cout << char(217) << endl;
+void cara5(int i, int y){
+    gotoxy((10*i+1),(y+5));
+    cout<<char(201)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(187);
+    gotoxy((10*i+1),(y+6));
+    cout<<char(186)<<char(255)<<char(254)<<char(255)<<char(255)<<char(255)<<char(254)<<char(255)<<char(186);
+    gotoxy((10*i+1),(y+7));
+    cout<<char(186);
+    gotoxy(((10*i+1)+1),(y+7));
+    cout<<char(255)<<char(255)<<char(255)<<char(254)<<char(255)<<char(255)<<char(255);
+    gotoxy(((10*i+1)+8),(y+7));
+    cout<<char(186);
+    gotoxy((10*i+1),(y+8));
+    cout<<char(186)<<char(255)<<char(254)<<char(255)<<char(255)<<char(255)<<char(254)<<char(255)<<char(186);
+    gotoxy((10*i+1),(y+9));
+    cout<<char(200)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(188)<<endl;
 }
 
-void cara6(){
-    cout << char(218);
-    for (i=1; i<8; i++) cout << (char)196;
-    cout << char(191) << endl;
-    cout << char(179) << " " << char (254) << "   " << char(254) << " " << char(179) << endl;
-    cout << char(179) << " " << char (254) << "   " << char(254) << " " << char(179) << endl;
-    cout << char(179) << " " << char (254) << "   " << char(254) << " " << char(179) << endl;
-    cout << char(192);
-    for (i=1; i<8; i++) cout << (char)196;
-    cout << char(217) << endl;
+void cara6(int i, int y){
+    gotoxy((10*i+1),(y+5));
+    cout<<char(201)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(187);
+    gotoxy((10*i+1),(y+6));
+    cout<<char(186)<<char(255)<<char(254)<<char(255)<<char(255)<<char(255)<<char(254)<<char(255)<<char(186);
+    gotoxy((10*i+1),(y+7));
+    cout<<char(186);
+    gotoxy(((10*i+1)+1),(y+7));
+    cout<<char(255)<<char(254)<<char(255)<<char(255)<<char(255)<<char(254)<<char(255);
+    gotoxy(((10*i+1)+8),(y+7));
+    cout<<char(186);
+    gotoxy((10*i+1),(y+8));
+    cout<<char(186)<<char(255)<<char(254)<<char(255)<<char(255)<<char(255)<<char(254)<<char(255)<<char(186);
+    gotoxy((10*i+1),(y+9));
+    cout<<char(200)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(205)<<char(188)<<endl;
 }
 #endif // DADOS_H_INCLUDED

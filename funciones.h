@@ -103,27 +103,27 @@ void cargarVector(int v[], int tam){
     }
 }
 
-void mostrarDados(int v[], int tam){
+void mostrarDados(int v[], int tam, int y){
     int i, cara;
     for(i=0;i<tam;i++){
         cara=v[i];
-        switch(cara){
-            case 1: cara1();
-            break;
-            case 2: cara2();
-            break;
-            case 3: cara3();
-            break;
-            case 4: cara4();
-            break;
-            case 5: cara5();
-            break;
-            case 6: cara6();
-            break;
+        if(cara==1){
+            cara1(i, y);
+        }else if (cara==2){
+            cara2(i, y);
+        }else if (cara==3){
+            cara3(i, y);
+        }else if (cara==4){
+            cara4(i, y);
+        }else if (cara==5){
+            cara5(i, y);
+        }else if (cara==6){
+            cara6(i, y);
         }
     }
 
 }
+
 
 
 #endif // FUNCIONES_H_INCLUDED
