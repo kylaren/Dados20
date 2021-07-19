@@ -13,8 +13,6 @@ extern int i; /// extern para declarar sin inicializar la variable (ya se inicia
 
 void cargarAleatorio(int v[], int* tam, int* limite); /// Asigna valores aleatorios a cada posicion del vector
 
-void mostrarVector(int v[], int* tam); /// Muestra lo que contiene cada una de las posiciones del vector
-
 int valormaximoVector(int v[], int tam); /// Devuelve  el valor (primero) maximo en el vector
 
 void ponerCero(int v[], int tam); /// Pone en 0 todas las posiciones del vector
@@ -25,13 +23,9 @@ int posicionNumeroEnVector(int v[],int tam, int numero); /// Devuelve la posició
 
 int contarNumerosRepetidos(int v[], int tam , int numero); /// Cuenta la cantidad de veces que se repite un número en el vector
 
-void mostrarVectorSin0(int v[], int tam); /// Muestra lo que contiene cada una de las posiciones del vector que no contienen 0
-
-void cargarVector(int v[], int tam); /// Asigna valores a cada una de las posiciones del vector
-
 void mostrarDados(int v[], int tam, int y); /// Muestra los dados
 
-void mostrarDadosSin0(int v[], int tam, int y); /// Muestra los dados de las posiciones del vector que no contienen 0
+void cargarMostrarDados(int v[], int j, int y); /// Carga y muestra los dados simultaneamente
 
 void invertirVector(int v[], int v2[], int tam); /// Invierte las posiciones del contenido del vector
 
@@ -44,13 +38,6 @@ void cargarAleatorio(int v[], int tam, int limite){
   for( i=0; i<tam; i++ ){
         v[i]=(rand()%limite)+1;
   }
-}
-
-void mostrarVector(int v[], int tam){
-    int i;
-    for(i=0;i<tam;i++){
-        cout<<v[i]<<"\t";
-    }
 }
 
 int valormaximoVector(int v[], int tam){
@@ -91,23 +78,6 @@ int contarNumerosRepetidos(int v[], int tam, int numero){
         if(v[i]==numero) cant++;
         }
     return cant;
-}
-
-void mostrarVectorSin0(int v[], int tam){
-    int i;
-    for(i=0;i<tam;i++){
-        if(v[i]!=0){
-            cout << "\t" << v[i];
-        }
-    }
-}
-
-void cargarVector(int v[], int tam){
-    int i;
-    for(i=0;i<tam;i++){
-        cout<<"DADO " << i + 1 << ":";
-        cin>>v[i];
-    }
 }
 
 void mostrarDados(int v[], int tam, int y){

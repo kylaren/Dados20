@@ -912,7 +912,7 @@ void modoSimulado(){
                                         cout << endl;
 
                                         ponerCero(vtirada,5);
-                                        cargarMostrarDados(vtirada, j, 3);
+                                        cargarMostrarDados(vtirada, j, 3);  /// Carga los dados y los muestra simultaneamente
 
                                         maximo=valormaximoVector(vtirada,5);
                                         vmaximos[j-1]=maximo;
