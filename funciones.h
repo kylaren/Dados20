@@ -130,25 +130,16 @@ void mostrarDados(int v[], int tam, int y){
     }
 }
 
-void mostrarDadosSin0(int v[], int tam, int y){
-    int x, cara;
-    for(x=0;x<tam;x++){
-        cara=v[x];
-        if (cara!=0){
-            if(cara==1){
-                cara1(x, y);
-            }else if (cara==2){
-                cara2(x, y);
-            }else if (cara==3){
-                cara3(x, y);
-            }else if (cara==4){
-                cara4(x, y);
-            }else if (cara==5){
-                cara5(x, y);
-            }else if (cara==6){
-                cara6(x, y);
+void cargarMostrarDados(int v[], int j, int y){
+    int k, d;
+    for (k=0; k<j; k++){
+            gotoxy(1,y);
+            cout << "Dado: ";
+            gotoxy(8,y);
+            cin >> v[k];
+            for (d=0; d<5; d++){
+                    mostrarDados(v, 5, y+1);
             }
-        }
     }
 }
 

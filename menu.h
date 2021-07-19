@@ -112,7 +112,7 @@ void unJugador(){
                                         cout << endl;
                                         cout << "DADOS CON PUNTAJES MAXIMOS DE CADA TIRADA:"<< endl;
                                         invertirVector(vmaximos, vmaximosInv, 5);
-                                        mostrarDadosSin0(vmaximosInv, 5, 15);
+                                        mostrarDados(vmaximosInv, 5, 15);
                                         cout << endl;
                                         cout << (char)168 << "Lanzar dados? ";
                                         system("pause");
@@ -378,7 +378,7 @@ void dosJugadores(){
                                         cout << endl;
                                         cout << "DADOS CON PUNTAJES MAXIMOS DE CADA TIRADA:";
                                         invertirVector(vmaximos, vmaximosInv, 5);
-                                        mostrarDadosSin0(vmaximosInv, 5, 15);
+                                        mostrarDados(vmaximosInv, 5, 15);
                                         cout << endl;
                                         cout << (char)168 << "Lanzar dados? " << endl;
                                         system("pause");
@@ -583,7 +583,7 @@ void dosJugadores(){
                                         cout << endl;
                                         cout << "DADOS CON PUNTAJES MAXIMOS DE CADA TIRADA:";
                                         invertirVector(vmaximos, vmaximosInv, 5);
-                                        mostrarDadosSin0(vmaximosInv, 5, 15);
+                                        mostrarDados(vmaximosInv, 5, 15);
                                         cout << endl;
                                         cout << (char)168 << "Lanzar dados? " << endl;
                                         system("pause");
@@ -832,35 +832,35 @@ void dosJugadores(){
                                 }
                             }
                             else{
-                                    gotoxy(14,2);
-                                    cout << (char)201;
-                                    gotoxy(15,2);
-                                    for (o=1; o<23; o++) cout << (char)205;
-                                    cout << (char)187;
-                                    gotoxy(14,3);
-                                    cout << (char)186 << "       GANADOR: ";
-                                    gotoxy(37,3);
-                                    cout << (char)186 << endl;
-                                    gotoxy(14,4);
-                                    cout << (char)186 << "     " << player2;
-                                    gotoxy(37,4);
-                                    cout << (char)186;
-                                    gotoxy(14,5);
-                                    cout << (char)204;
-                                    gotoxy(15,5);
-                                    for (o=1; o<23; o++) cout << (char)205;
-                                    gotoxy(37,5);
-                                    cout << (char)185;
-                                    gotoxy(14,6);
-                                    cout << (char)186 << " PUNTAJE FINAL: " << puntajefinal2;
-                                    gotoxy(37,6);
-                                    cout << (char)186;
-                                    gotoxy(14,7);
-                                    cout << (char)200;
-                                    gotoxy(15,7);
-                                    for (o=1; o<23; o++) cout << (char)205;
-                                    gotoxy(37,7);
-                                    cout << (char)188;
+                                gotoxy(14,2);
+                                cout << (char)201;
+                                gotoxy(15,2);
+                                for (o=1; o<23; o++) cout << (char)205;
+                                cout << (char)187;
+                                gotoxy(14,3);
+                                cout << (char)186 << "       GANADOR: ";
+                                gotoxy(37,3);
+                                cout << (char)186 << endl;
+                                gotoxy(14,4);
+                                cout << (char)186 << "     " << player2;
+                                gotoxy(37,4);
+                                cout << (char)186;
+                                gotoxy(14,5);
+                                cout << (char)204;
+                                gotoxy(15,5);
+                                for (o=1; o<23; o++) cout << (char)205;
+                                gotoxy(37,5);
+                                cout << (char)185;
+                                gotoxy(14,6);
+                                cout << (char)186 << " PUNTAJE FINAL: " << puntajefinal2;
+                                gotoxy(37,6);
+                                cout << (char)186;
+                                gotoxy(14,7);
+                                cout << (char)200;
+                                gotoxy(15,7);
+                                for (o=1; o<23; o++) cout << (char)205;
+                                gotoxy(37,7);
+                                cout << (char)188;
                             }
 }
 
@@ -910,14 +910,21 @@ void modoSimulado(){
                                         cout << "TIRADA N" << (char)167 << ntirada << endl;
                                         for (o=1; o<55; o++) cout << (char)205;
                                         cout << endl;
-                                        cargarVector(vtirada,j);
-                                        maximo=valormaximoVector(vtirada,j);
+
+                                        ponerCero(vtirada,5);
+                                        cargarMostrarDados(vtirada, j, 3);
+
+                                        maximo=valormaximoVector(vtirada,5);
                                         vmaximos[j-1]=maximo;
-                                        cout << "El valor maximo es: " << maximo << endl;
+
+                                        cout <<  endl;
                                         for (o=1; o<55; o++) cout << (char)205;
                                                 cout << endl;
                                                 cout << "DADOS CON PUNTAJES MAXIMOS DE CADA TIRADA:";
-                                                mostrarVectorSin0(vmaximos,5);
+
+                                                invertirVector(vmaximos, vmaximosInv, 5);
+                                                mostrarDados(vmaximosInv, 5, 12);
+
                                                 cout << endl;
                                                 cout << (char)168 << "Lanzar dados? ";
                                                 system("pause");
@@ -935,7 +942,10 @@ void modoSimulado(){
                                                     for (o=1; o<55; o++) cout << (char)205;
                                                     cout << endl;
                                                     system("pause");
-                                                    cargarVector(vtirada,5);
+
+                                                    ponerCero(vtirada,5);
+                                                    cargarMostrarDados(vtirada, 5, 6);
+
                                                     cout << endl;
                                                     cantDadosRep = contarNumerosRepetidos(vtirada,5,numGeneradorPuntos);
                                                     if (cantDadosRep==0){
@@ -965,6 +975,7 @@ void modoSimulado(){
                                 puntajefinal = puntajefinal + puntajeacumulado;
 
                                 system("pause");
+                                 system("cls");
 
                                 for (o=1; o<44; o++) cout << (char)205;
                                 cout << endl;
@@ -974,6 +985,7 @@ void modoSimulado(){
                                 strcpy(highestScorePlayer,player1);
                             }
                             ///DATOS DE SALIDA PARA ESTA OPCION
+
                             cout << "JUGADOR: " << player1 << endl;
                             if(cRondas0==0){
                                     cout << "No hubo rondas sin puntos." << endl;
@@ -1027,18 +1039,24 @@ void modoSimulado(){
                                                 cout << " TIRADA N" << (char)167 << ntirada << endl;
                                                 for (o=1; o<55; o++) cout << (char)205;
                                                 cout << endl;
-                                                cargarVector(vtirada,j);
+
+                                                ponerCero(vtirada,5);
+                                                cargarMostrarDados(vtirada, j, 3);  /// Carga los dados y los muestra simultaneamente
+
                                                 maximo=valormaximoVector(vtirada,j);
                                                 vmaximos[j-1]=maximo;
                                                 cout << "El valor maximo es: " << maximo << endl;
                                                 for (o=1; o<55; o++) cout << (char)205;
-                                                        cout << endl;
-                                                        cout << "DADOS CON PUNTAJES MAXIMOS DE CADA TIRADA:";
-                                                        mostrarVectorSin0(vmaximos,5);
-                                                        cout << endl;
-                                                        cout << (char)168 << "Lanzar dados? ";
-                                                        system("pause");
-                                                        system("cls");
+                                                cout << endl;
+                                                cout << "DADOS CON PUNTAJES MAXIMOS DE CADA TIRADA:";
+
+                                                invertirVector(vmaximos, vmaximosInv, 5);
+                                                mostrarDados(vmaximosInv, 5, 12);
+
+                                                cout << endl;
+                                                cout << (char)168 << "Lanzar dados? ";
+                                                system("pause");
+                                                system("cls");
                                                 if(j<=1){ /// Ingreso despues de la ultima tirada
                                                     sumamax=sumarVector(vmaximos,5);
                                                     cout << "PUNTAJE ACUMULADO: " << sumamax << endl;
@@ -1052,7 +1070,10 @@ void modoSimulado(){
                                                             for (o=1; o<55; o++) cout << (char)205;
                                                             cout << endl;
                                                             system("pause");
-                                                            cargarVector(vtirada,5);
+
+                                                            ponerCero(vtirada,5);
+                                                            cargarMostrarDados(vtirada, 5, 6);
+
                                                             cantDadosRep = contarNumerosRepetidos(vtirada,5,numGeneradorPuntos);
                                                             if (cantDadosRep==0){
                                                                 puntajeacumulado=0;
@@ -1097,14 +1118,20 @@ void modoSimulado(){
                                                 cout << " TIRADA N" << (char)167 << ntirada << endl;
                                                 for (o=1; o<55; o++) cout << (char)205;
                                                 cout << endl;
-                                                cargarVector(vtirada,j);
+
+                                                ponerCero(vtirada,5);
+                                                cargarMostrarDados(vtirada, j, 3);  /// Carga los dados y los muestra simultaneamente
+
                                                 maximo=valormaximoVector(vtirada,j);
                                                 vmaximos[j-1]=maximo;
                                                 cout << "El valor maximo es: " << maximo << endl;
                                                 for (o=1; o<55; o++) cout << (char)205;
                                                         cout << endl;
                                                         cout << "DADOS CON PUNTAJES MAXIMOS DE CADA TIRADA:";
-                                                        mostrarVectorSin0(vmaximos,5);
+
+                                                        invertirVector(vmaximos, vmaximosInv, 5);
+                                                        mostrarDados(vmaximosInv, 5, 12);
+
                                                         cout << endl;
                                                         cout << (char)168 << "Lanzar dados? ";
                                                         cout << endl<< endl<< endl<< endl;
@@ -1123,7 +1150,10 @@ void modoSimulado(){
                                                             for (o=1; o<55; o++) cout << (char)205;
                                                             cout << endl;
                                                             system("pause");
-                                                            cargarVector(vtirada,5);
+
+                                                            ponerCero(vtirada,5);
+                                                            cargarMostrarDados(vtirada, 5, 6);
+
                                                             cout << endl;
                                                             cantDadosRep = contarNumerosRepetidos(vtirada,5,numGeneradorPuntos);
                                                             if (cantDadosRep==0){
