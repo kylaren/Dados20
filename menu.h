@@ -347,10 +347,11 @@ void dosJugadores(){
                         puntajefinal1=0;
                         puntajefinal2=0;
                         for (i=1; i<=cantRondas; i++){/// RONDAS
+                                for (o=1; o<55; o++) cout << (char)205;
+                                cout << endl << player1 << ", cuantos puntos quiere apostar para esta ronda?:" << endl;
+                                gotoxy(1,4);
+                                for (o=1; o<55; o++) cout << (char)205;
                                 gotoxy(1,3);
-                                for (o=1; o<63; o++) cout << (char)205;
-                                gotoxy(1,2);
-                                cout << " " <<player1 << ", cuantos puntos quiere apostar para esta ronda?: ";
                                 cin >> puntosapostados;
                                 system("cls");
                                 puntajeacumulado=0;
@@ -550,10 +551,12 @@ void dosJugadores(){
                                 system("pause");
                                 system("cls");
                 /// JUGADOR 2
+
+                                for (o=1; o<55; o++) cout << (char)205;
+                                cout << endl << player2 << ", cuantos puntos quiere apostar para esta ronda?:" << endl;
+                                gotoxy(1,4);
+                                for (o=1; o<55; o++) cout << (char)205;
                                 gotoxy(1,3);
-                                for (o=1; o<63; o++) cout << (char)205;
-                                gotoxy(1,2);
-                                cout << " " <<player2 << ", cuantos puntos quiere apostar para esta ronda?: ";
                                 cin >> puntosapostados;
                                 system("cls");
                                 puntajeacumulado=0;
@@ -814,7 +817,11 @@ void modoSimulado(){
                             cRondas0=0;
                             cRondasP=0;
                             for (i=1; i<=cantRondas; i++){ /// RONDAS
-                                cout << "Cuantos puntos quiere apostar para esta ronda?: ";
+                                system("cls");
+                                for (o=1; o<55; o++) cout << (char)205;
+                                cout << endl << "Cuantos puntos quiere apostar para esta ronda?: "<<endl;
+                                for (o=1; o<55; o++) cout << (char)205;
+                                gotoxy(49,2);
                                 cin >> puntosapostados;
                                 system("cls");
                                 ntirada=0;
@@ -926,7 +933,11 @@ void modoSimulado(){
                                 puntajefinal1=0;
                                 puntajefinal2=0;
                                 for (i=1; i<=cantRondas; i++){/// RONDAS
-                                        cout << player1 << ", cuantos puntos quiere apostar para esta ronda?: ";
+                                        for (o=1; o<55; o++) cout << (char)205;
+                                        cout << endl << player1 << ", cuantos puntos quiere apostar para esta ronda?:" << endl;
+                                        gotoxy(1,4);
+                                        for (o=1; o<55; o++) cout << (char)205;
+                                        gotoxy(1,3);
                                         cin >> puntosapostados;
                                         system("cls");
                                         puntajeacumulado=0;
@@ -991,7 +1002,12 @@ void modoSimulado(){
                                         }
                                         system("pause");
                                         system("cls");
-                                        cout << player2 << ", cuantos puntos quiere apostar para esta ronda?: ";
+                            ///JUGADOR 2
+                                        for (o=1; o<55; o++) cout << (char)205;
+                                        cout << endl << player2 << ", cuantos puntos quiere apostar para esta ronda?:" << endl;
+                                        gotoxy(1,4);
+                                        for (o=1; o<55; o++) cout << (char)205;
+                                        gotoxy(1,3);
                                         cin >> puntosapostados;
                                         system("cls");
                                         puntajeacumulado=0;
