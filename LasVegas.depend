@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1626634256 source:c:\users\chiqui\documents\github\dados20\dados20\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<ctime>
+	<conio.h>
+	<cstring>
+	"rlutil.h"
+	"menu.h"
+
+1626634255 c:\users\chiqui\documents\github\dados20\dados20\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1626643647 c:\users\chiqui\documents\github\dados20\dados20\menu.h
+	"funciones.h"
+
+1626637622 c:\users\chiqui\documents\github\dados20\dados20\funciones.h
+	"dados.h"
+	"rlutil.h"
+
+1626634254 c:\users\chiqui\documents\github\dados20\dados20\dados.h
+
+1626634256 source:c:\users\chiqui\desktop\bak piola\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<ctime>
+	<conio.h>
+	<cstring>
+	"rlutil.h"
+	"menu.h"
+
+1626634255 c:\users\chiqui\desktop\bak piola\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1626658242 c:\users\chiqui\desktop\bak piola\menu.h
+	"funciones.h"
+
+1626637622 c:\users\chiqui\desktop\bak piola\funciones.h
+	"dados.h"
+	"rlutil.h"
+
+1626634254 c:\users\chiqui\desktop\bak piola\dados.h
+

@@ -5,7 +5,7 @@
 
 ///DECLARACION DE VARIABLES
 
-int o, i, j, k, opcM;
+int o, i, j, k, v, opcM;
 char player1[15], player2[15];
 int cantRondas, contMaximos;
 int vtirada[5], vmaximos[5], vmaximosInv[5], vnumgenerador[6];
@@ -17,11 +17,11 @@ int highestScore;
 
 /// DECLARACION DE FUNCIONES
 
-void menu(); ///menu completo
-void unJugador(); /// juego para 1 jugador
-void dosJugadores(); /// juego para 2 jugadores
-void puntuacionAlta(); /// puntuacion mas alta
-void modoSimulado(); /// modo simulado para 1 o 2 jugadores
+void menu(); /// Menu completo
+void unJugador(); /// Juego para 1 jugador
+void dosJugadores(); /// Juego para 2 jugadores
+void puntuacionAlta(); /// Puntuacion mas alta
+void modoSimulado(); /// Modo simulado para 1 o 2 jugadores
 
 
 /// DEFINICIONES DE FUNCIONES: OPCIONES DEL MENU
@@ -30,7 +30,7 @@ void menu(){
     system("cls");
     gotoxy(10,5);
     cout << (char)201;
-    for (i=1; i<44; i++) cout << (char)205; ///Para que quede mas fashion
+    for (i=1; i<44; i++) cout << (char)205; /// Para que quede mas fashion
     cout << (char)187 << endl;
     gotoxy(10,6);
     cout << (char)186 << " 1. JUEGO NUEVO PARA 1 JUGADOR.";
@@ -62,40 +62,6 @@ void menu(){
     cout << endl << endl;
     gotoxy(13,12);
     cout << "Ingrese una opcion: ";
-           /* gotoxy(30,11);
-            cout << (char)201;
-            for (i=1; i<44; i++) cout << (char)205; ///Para que quede mas fashion
-            cout << (char)187 << endl;
-            gotoxy(30,12);
-            cout << (char)186 << " 1. JUEGO NUEVO PARA 1 JUGADOR.";
-            gotoxy(74,12);
-            cout << (char)186;
-            gotoxy(30,13);
-            cout << (char)186 << " 2. JUEGO NUEVO PARA 2 JUGADORES.";
-            gotoxy(74,13);
-            cout << (char)186;
-            gotoxy(30,14);
-            cout << (char)186 << " 3. PUNTUACION MAS ALTA.";
-            gotoxy(74,14);
-            cout << (char)186;
-            gotoxy(30,15);
-            cout << (char)186 << " 4. MODO SIMULADO (CARGA DE DATOS MANUAL).";
-            gotoxy(74,15);
-            cout << (char)186;
-            gotoxy(30,16);
-            cout << (char)186 << " 0. FIN DEL PROGRAMA.";
-            gotoxy(74,16);
-            cout << (char)186;
-            gotoxy(30,17);
-            cout << (char)200;
-            gotoxy(31,17);
-            for (i=1; i<44; i++) cout << (char)205;
-            gotoxy(74,17);
-            cout << (char)188;
-            gotoxy(32,17);
-            cout << endl << endl;
-            gotoxy(33,18);
-            cout << "Ingrese una opcion: ";*/
 }
 
 void unJugador(){
@@ -155,7 +121,7 @@ void unJugador(){
                                         system("cls");
                                         if(j<=1){ /// Ingreso despues de la ultima tirada
                                                 gotoxy(14,5);
-                                                for (i=1; i<46; i++) cout << (char)205; /// Comienzo del mensaje
+                                                for (o=1; o<46; o++) cout << (char)205; /// Comienzo del mensaje
                                                 cout << (char)187;
                                                 gotoxy(14,5);
                                                 cout << (char)201;
@@ -175,9 +141,9 @@ void unJugador(){
                                                 gotoxy(1,8);
                                                 cout <<(char)201;
                                                 gotoxy(2,8);
-                                                for (i=1; i<13; i++) cout << (char)205;
+                                                for (o=1; o<13; o++) cout << (char)205;
                                                 gotoxy(11,8);
-                                                for (i=1; i<63; i++) cout << (char)205;
+                                                for (o=1; o<63; o++) cout << (char)205;
                                                 cout << (char)187;
                                                 gotoxy(14,8);
                                                 cout << (char)202;
@@ -194,16 +160,16 @@ void unJugador(){
                                                 system("cls"); /// Comienzo del mensaje
                                                 cargarAleatorio(vtirada,5,6);
                                                 gotoxy(14,2);
-                                                for (i=1; i<24; i++) cout << (char)205;
+                                                for (o=1; o<24; o++) cout << (char)205;
                                                 cout << (char)187;
                                                 gotoxy(14,2);
                                                 cout << (char)201;
                                                 gotoxy(14,3);
-                                                cout << (char)186 << "   " << " ULTIMA RONDA! " << endl;
+                                                cout << (char)186 <<"     ULTIMO TIRO! " << endl;
                                                 gotoxy(37,3);
                                                 cout << (char)186;
                                                 gotoxy(9,4);
-                                                for (i=1; i<33; i++) cout << (char)205;
+                                                for (o=1; o<33; o++) cout << (char)205;
                                                 cout << (char)187;
                                                 gotoxy(9,4);
                                                 cout << (char)201;
@@ -216,7 +182,7 @@ void unJugador(){
                                                 gotoxy(41,5);
                                                 cout << (char)186;
                                                 gotoxy(9,6);
-                                                for (i=1; i<33; i++) cout << (char)205;
+                                                for (o=1; o<33; o++) cout << (char)205;
                                                 gotoxy(9,6);
                                                 cout << (char)200;
                                                 gotoxy(41,6);
@@ -225,28 +191,101 @@ void unJugador(){
                                                 mostrarDados(vtirada,5, 6);
 
                                                 gotoxy(1,12);
-                                                for (i=1; i<50; i++) cout << (char)205;
+                                                for (o=1; o<50; o++) cout << (char)205;
                                                 cout << endl;
                                                 cantDadosRep = contarNumerosRepetidos(vtirada,5,numGeneradorPuntos);
                                                 if (cantDadosRep==0){
                                                     puntajeacumulado=0;
-                                                        cout << "No hubo dados con el numero generador de puntos." << endl << "PUNTAJE PARCIAL: " << puntajeacumulado << endl;
+                                                    gotoxy(9,14); /// Comienzo del menasje
+                                                    for (o=1; o<33; o++) cout << (char)205;
+                                                    cout << (char)187;
+                                                    gotoxy(9,14);
+                                                    cout << (char)201;
+                                                    gotoxy(9,15);
+                                                    cout << (char)186 << "       PUNTAJE PARCIAL: " << puntajeacumulado << endl;
+                                                    gotoxy(41,15);
+                                                    cout << (char)186;
+                                                    gotoxy(1,16);
+                                                    for (o=1; o<49; o++) cout << (char)205;
+                                                    gotoxy(1,16);
+                                                    cout << (char)201;
+                                                    gotoxy(9,16);
+                                                    cout << (char)202;
+                                                    gotoxy(41,16);
+                                                    cout << (char)202;
+                                                    gotoxy(49,16);
+                                                    cout << (char)187;
+                                                    gotoxy(1,17);
+                                                    cout << (char)186 << "No hubo dados con el numero generador de puntos" << (char)186 << endl;
+                                                    gotoxy(1,18);
+                                                    for (o=1; o<49; o++) cout << (char)205;
+                                                    gotoxy(1,18);
+                                                    cout << (char)200;
+                                                    gotoxy(49,18);
+                                                    cout << (char)188;
+                                                    cout << endl;/// Fin del mensaje
+
                                                     cRondas0++;
                                                 }
                                                 else{
                                                     puntajeacumulado = puntosapostados*cantDadosRep;
-                                                    cout << endl << "PUNTAJE PARCIAL: " << puntajeacumulado << endl;
+                                                    gotoxy(9,14);
+                                                    for (o=1; o<33; o++) cout << (char)205;
+                                                    cout << (char)187;
+                                                    gotoxy(9,14);
+                                                    cout << (char)201;
+                                                    gotoxy(9,15);
+                                                    cout << (char)186 << "       PUNTAJE PARCIAL: " << puntajeacumulado << endl;
+                                                    gotoxy(41,15);
+                                                    cout << (char)186;
+                                                    gotoxy(9,16);
+                                                    for (o=1; o<33; o++) cout << (char)205;
+                                                    gotoxy(9,16);
+                                                    cout << (char)200;
+                                                    gotoxy(41,16);
+                                                    cout << (char)188;
+                                                    cout << endl;
                                                 }
                                             }
                                             else{
                                                 if (sumamax<=19){
-                                                        cout << "Se restan los puntos apostados a su puntaje final." << endl;
+                                                        system("cls");
                                                         puntajeacumulado = puntajeacumulado - puntosapostados;
                                                         if (puntajeacumulado<=0){
                                                             puntajeacumulado=0;
                                                             cRondas0++;
                                                         }
-                                                        cout << "PUNTAJE PARCIAL: " << puntajeacumulado << endl;
+                                                        gotoxy(9,5);
+                                                        for (o=1; o<51; o++) cout << (char)205;
+                                                        cout << (char)187;
+                                                        gotoxy(9,5);
+                                                        cout << (char)201;
+                                                        gotoxy(9,6);
+                                                        cout << (char)186 << "Se restan los puntos apostados a su puntaje total" << endl;
+                                                        gotoxy(59,6);
+                                                        cout << (char)186;
+                                                        gotoxy(9,7);
+                                                        for (o=1; o<51; o++) cout << (char)205;
+                                                        gotoxy(9,7);
+                                                        cout << (char)200;
+                                                        gotoxy(59,7);
+                                                        cout << (char)188;
+                                                        gotoxy(18,7);
+                                                        cout << (char)203;
+                                                        gotoxy(50,7);
+                                                        cout << (char)203;
+                                                        gotoxy(18,8);
+                                                        cout << (char)186 << " Su nuevo puntaje es de: " << puntajefinal << endl;
+                                                        gotoxy(50,8);
+                                                        cout << (char)186;
+                                                        gotoxy(18,9);
+                                                        for (o=1; o<33; o++) cout << (char)205;
+                                                        gotoxy(18,9);
+                                                        cout << (char)200;
+                                                        gotoxy(50,9);
+                                                        cout << (char)188;
+                                                        cout << endl;
+
                                                         cRondasP++;
                                                 }
                                             }
@@ -262,19 +301,33 @@ void unJugador(){
                         ///DATOS SALIDA PARA ESTA OPCION
                         system("cls");
                         cout << "JUGADOR: " << player1 << endl;
+                        for (o=1; o<55; o++) cout << (char)205;
+                        cout << endl;
                         if(cRondas0==0){
-                            cout << "No hubo rondas sin puntos." << endl;
+                            cout << (char)254 << "  No hubo rondas sin puntos." << endl << endl;
                         }
                         else{
-                            cout << "Total de rondas sin puntos: " << cRondas0 << endl;
+                            cout << (char)254 << "  Total de rondas sin puntos: " << cRondas0 << endl << endl;
                         }
                         if(cRondasP==0){
-                            cout << "No hubo rondas con perdida de puntos." << endl;
+                            cout << (char)254 << "  No hubo rondas con perdida de puntos." << endl << endl;
                         }
                         else{
-                            cout << "Total de rondas con perdida de puntos: " << cRondasP << endl;
+                            cout << (char)254 << "  Total de rondas con perdida de puntos: " << cRondasP << endl << endl;
                         }
-                        cout << "PUNTAJE FINAL: " << puntajefinal << endl;
+                        for (o=1; o<55; o++) cout << (char)205;
+                        cout << endl;
+                        cout << "                  PUNTAJE FINAL: " << puntajefinal << endl;
+                        for (o=1; o<55; o++) cout << (char)205;
+                        cout << endl;
+                        for (v=1; v<9; v++){gotoxy(55,v); cout << (char)186;}
+                        gotoxy(55,2);
+                        cout << (char)185;
+                        gotoxy(55,7);
+                        cout << (char)185;
+                        gotoxy(55,9);
+                        cout << (char)188;
+
 }
 
 void dosJugadores(){
@@ -316,13 +369,14 @@ void dosJugadores(){
                                         cout << "TIRADA N" << (char)167 << ntirada << endl;
                                         for (o=1; o<55; o++) cout << (char)205;
                                         cout << endl;
-                                        mostrarVector(vtirada,j);
+                                        mostrarDados(vtirada, j, 5);
                                         cout << endl;
                                         cout << "El valor maximo es: " << maximo << endl;
                                         for (o=1; o<55; o++) cout << (char)205;
                                         cout << endl;
                                         cout << "DADOS CON PUNTAJES MAXIMOS DE CADA TIRADA:";
-                                        mostrarVectorSin0(vmaximos,5);
+                                        invertirVector(vmaximos, vmaximosInv, 5);
+                                        mostrarDadosSin0(vmaximosInv, 5, 15);
                                         cout << endl;
                                         cout << (char)168 << "Lanzar dados? " << endl;
                                         system("pause");
@@ -340,6 +394,40 @@ void dosJugadores(){
                                                     cout << endl;
                                                     cout << (char)168 << "Lanzar dados? ";
                                                     system("pause");
+
+                                                     system("cls"); /// Comienzo del mensaje
+                                                    cargarAleatorio(vtirada,5,6);
+                                                    gotoxy(14,2);
+                                                    for (o=1; o<24; o++) cout << (char)205;
+                                                    cout << (char)187;
+                                                    gotoxy(14,2);
+                                                    cout << (char)201;
+                                                    gotoxy(14,3);
+                                                    cout << (char)186 << "     ULTIMO TIRO! " << endl;
+                                                    gotoxy(37,3);
+                                                    cout << (char)186;
+                                                    gotoxy(9,4);
+                                                    for (o=1; o<33; o++) cout << (char)205;
+                                                    cout << (char)187;
+                                                    gotoxy(9,4);
+                                                    cout << (char)201;
+                                                    gotoxy(37,4);
+                                                    cout << (char)202;
+                                                    gotoxy(14,4);
+                                                    cout << (char)202;
+                                                    gotoxy(9,5);
+                                                    cout << (char)186 << " NUMERO GENERADOR DE PUNTOS: " << numGeneradorPuntos;
+                                                    gotoxy(41,5);
+                                                    cout << (char)186;
+                                                    gotoxy(9,6);
+                                                    for (o=1; o<33; o++) cout << (char)205;
+                                                    gotoxy(9,6);
+                                                    cout << (char)200;
+                                                    gotoxy(41,6);
+                                                    cout << (char)188; /// Fin del mensaje
+
+                                                    mostrarDados(vtirada,5, 6);
+                                                    cout << endl;
                                                     cargarAleatorio(vtirada,5,6);
                                                     mostrarVector(vtirada,5);
                                                     cout << endl;
