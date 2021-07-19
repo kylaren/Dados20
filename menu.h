@@ -773,17 +773,94 @@ void dosJugadores(){
                             ///DATOS DE SALIDA PARA ESTA OPCION
                             if(puntajefinal1>=puntajefinal2){
                                 if(puntajefinal1>puntajefinal2){
-                                    cout << "GANADOR: " << player1 << endl;
-                                    cout << "PUNTAJE FINAL: " << puntajefinal1 << endl;;
+                                    gotoxy(14,2);
+                                    cout << (char)201;
+                                    gotoxy(15,2);
+                                    for (o=1; o<23; o++) cout << (char)205;
+                                    cout << (char)187;
+                                    gotoxy(14,3);
+                                    cout << (char)186 << "       GANADOR: ";
+                                    gotoxy(37,3);
+                                    cout << (char)186 << endl;
+                                    gotoxy(14,4);
+                                    cout << (char)186 << "     " << player1;
+                                    gotoxy(37,4);
+                                    cout << (char)186;
+                                    gotoxy(14,5);
+                                    cout << (char)204;
+                                    gotoxy(15,5);
+                                    for (o=1; o<23; o++) cout << (char)205;
+                                    gotoxy(37,5);
+                                    cout << (char)185;
+                                    gotoxy(14,6);
+                                    cout << (char)186 << " PUNTAJE FINAL: " << puntajefinal1;
+                                    gotoxy(37,6);
+                                    cout << (char)186;
+                                    gotoxy(14,7);
+                                    cout << (char)200;
+                                    gotoxy(15,7);
+                                    for (o=1; o<23; o++) cout << (char)205;
+                                    gotoxy(37,7);
+                                    cout << (char)188;
                                 }
                                 else{
-                                    cout << "Empate. ";
-                                    cout << "PUNTAJE FINAL: " << puntajefinal1 << endl;
+                                    gotoxy(14,2);
+                                    cout << (char)201;
+                                    gotoxy(15,2);
+                                    for (o=1; o<23; o++) cout << (char)205;
+                                    cout << (char)187;
+                                    gotoxy(14,3);
+                                    cout << (char)186 << "        EMPATE. ";
+                                    gotoxy(37,3);
+                                    cout << (char)186 << endl;
+                                    gotoxy(14,4);
+                                    cout << (char)204;
+                                    gotoxy(15,4);
+                                    for (o=1; o<23; o++) cout << (char)205;
+                                    gotoxy(37,4);
+                                    cout << (char)185;
+                                    gotoxy(14,5);
+                                    cout << (char)186 << " PUNTAJE FINAL: " << puntajefinal1;
+                                    gotoxy(37,5);
+                                    cout << (char)186;
+                                    gotoxy(14,6);
+                                    cout << (char)200;
+                                    gotoxy(15,6);
+                                    for (o=1; o<23; o++) cout << (char)205;
+                                    gotoxy(37,6);
+                                    cout << (char)188;
                                 }
                             }
                             else{
-                                cout << "GANADOR: " << player2 << endl;
-                                cout << "PUNTAJE FINAL: " << puntajefinal2 << endl;
+                                    gotoxy(14,2);
+                                    cout << (char)201;
+                                    gotoxy(15,2);
+                                    for (o=1; o<23; o++) cout << (char)205;
+                                    cout << (char)187;
+                                    gotoxy(14,3);
+                                    cout << (char)186 << "       GANADOR: ";
+                                    gotoxy(37,3);
+                                    cout << (char)186 << endl;
+                                    gotoxy(14,4);
+                                    cout << (char)186 << "     " << player2;
+                                    gotoxy(37,4);
+                                    cout << (char)186;
+                                    gotoxy(14,5);
+                                    cout << (char)204;
+                                    gotoxy(15,5);
+                                    for (o=1; o<23; o++) cout << (char)205;
+                                    gotoxy(37,5);
+                                    cout << (char)185;
+                                    gotoxy(14,6);
+                                    cout << (char)186 << " PUNTAJE FINAL: " << puntajefinal2;
+                                    gotoxy(37,6);
+                                    cout << (char)186;
+                                    gotoxy(14,7);
+                                    cout << (char)200;
+                                    gotoxy(15,7);
+                                    for (o=1; o<23; o++) cout << (char)205;
+                                    gotoxy(37,7);
+                                    cout << (char)188;
                             }
 }
 
@@ -1093,17 +1170,94 @@ void modoSimulado(){
                                     ///DATOS DE SALIDA PARA ESTA OPCION
                                     if(puntajefinal1>=puntajefinal2){
                                         if(puntajefinal1>puntajefinal2){
-                                            cout << "GANADOR: " << player1 << endl;
-                                            cout << "Su puntaje total acumulado: " << puntajefinal1 << endl;;
+                                            gotoxy(14,2);
+                                            cout << (char)201;
+                                            gotoxy(15,2);
+                                            for (o=1; o<23; o++) cout << (char)205;
+                                            cout << (char)187;
+                                            gotoxy(14,3);
+                                            cout << (char)186 << "       GANADOR: ";
+                                            gotoxy(37,3);
+                                            cout << (char)186 << endl;
+                                            gotoxy(14,4);
+                                            cout << (char)186 << "     " << player1;
+                                            gotoxy(37,4);
+                                            cout << (char)186;
+                                            gotoxy(14,5);
+                                            cout << (char)204;
+                                            gotoxy(15,5);
+                                            for (o=1; o<23; o++) cout << (char)205;
+                                            gotoxy(37,5);
+                                            cout << (char)185;
+                                            gotoxy(14,6);
+                                            cout << (char)186 << " PUNTAJE FINAL: " << puntajefinal1;
+                                            gotoxy(37,6);
+                                            cout << (char)186;
+                                            gotoxy(14,7);
+                                            cout << (char)200;
+                                            gotoxy(15,7);
+                                            for (o=1; o<23; o++) cout << (char)205;
+                                            gotoxy(37,7);
+                                            cout << (char)188;
                                         }
                                         else{
-                                            cout << "Empate." << endl;
-                                            cout << "Puntaje total acumulado: " << puntajefinal1 << endl;
+                                            gotoxy(14,2);
+                                            cout << (char)201;
+                                            gotoxy(15,2);
+                                            for (o=1; o<23; o++) cout << (char)205;
+                                            cout << (char)187;
+                                            gotoxy(14,3);
+                                            cout << (char)186 << "        EMPATE. ";
+                                            gotoxy(37,3);
+                                            cout << (char)186 << endl;
+                                            gotoxy(14,4);
+                                            cout << (char)204;
+                                            gotoxy(15,4);
+                                            for (o=1; o<23; o++) cout << (char)205;
+                                            gotoxy(37,4);
+                                            cout << (char)185;
+                                            gotoxy(14,5);
+                                            cout << (char)186 << " PUNTAJE FINAL: " << puntajefinal1;
+                                            gotoxy(37,5);
+                                            cout << (char)186;
+                                            gotoxy(14,6);
+                                            cout << (char)200;
+                                            gotoxy(15,6);
+                                            for (o=1; o<23; o++) cout << (char)205;
+                                            gotoxy(37,6);
+                                            cout << (char)188;
                                         }
                                     }
                                     else{
-                                        cout << "GANADOR: " << player2 << endl;
-                                        cout << "Su puntaje total acumulado: " << puntajefinal2 << endl;
+                                        gotoxy(14,2);
+                                        cout << (char)201;
+                                        gotoxy(15,2);
+                                        for (o=1; o<23; o++) cout << (char)205;
+                                        cout << (char)187;
+                                        gotoxy(14,3);
+                                        cout << (char)186 << "       GANADOR: ";
+                                        gotoxy(37,3);
+                                        cout << (char)186 << endl;
+                                        gotoxy(14,4);
+                                        cout << (char)186 << "     " << player2;
+                                        gotoxy(37,4);
+                                        cout << (char)186;
+                                        gotoxy(14,5);
+                                        cout << (char)204;
+                                        gotoxy(15,5);
+                                        for (o=1; o<23; o++) cout << (char)205;
+                                        gotoxy(37,5);
+                                        cout << (char)185;
+                                        gotoxy(14,6);
+                                        cout << (char)186 << " PUNTAJE FINAL: " << puntajefinal2;
+                                        gotoxy(37,6);
+                                        cout << (char)186;
+                                        gotoxy(14,7);
+                                        cout << (char)200;
+                                        gotoxy(15,7);
+                                        for (o=1; o<23; o++) cout << (char)205;
+                                        gotoxy(37,7);
+                                        cout << (char)188;
                                     }
                                     system("pause");
                                 }
